@@ -47,3 +47,12 @@ resource "aws_s3_bucket" "example" {
     Environment = "Dev"
   }
 }
+
+resource "aws_s3_bucket" "example-today-bucket" {
+  bucket = "try-harder"
+
+  tags = {
+    Name        = "HELLO WORLD"
+    Environment = "Dev"
+  }
+}
