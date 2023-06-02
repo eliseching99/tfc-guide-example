@@ -30,6 +30,15 @@ resource "aws_instance" "web" {
   }
 }
 
+resource "aws_instance" "web" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "Elise third ec2"
+  }
+}
+
 resource "aws_s3_bucket" "example" {
   bucket = "elise-test-bucket"
 
